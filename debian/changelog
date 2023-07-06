@@ -1,5 +1,15 @@
-template-repository (1.0-1) unstable; urgency=medium
+rust-fnv (1.0.7-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Package fnv 1.0.7 from crates.io using debcargo 2.5.0
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Wolfgang Silbermayr ]
+  * Package fnv 1.0.7 from crates.io using debcargo 2.4.4-alpha.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 28 May 2022 17:08:15 +0000
+
+rust-fnv (1.0.6-1) unstable; urgency=medium
+
+  * Package fnv 1.0.6 from crates.io using debcargo 2.1.1
+
+ -- Ximin Luo <infinity0@debian.org>  Sat, 23 Jun 2018 11:53:49 -0700

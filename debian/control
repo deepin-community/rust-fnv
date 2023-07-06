@@ -1,15 +1,37 @@
-Source: template-repository
-Section: unknown
+Source: rust-fnv
+Section: rust
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Ximin Luo <infinity0@debian.org>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/fnv]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/fnv
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: librust-fnv-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Provides:
+ librust-fnv+default-dev (= ${binary:Version}),
+ librust-fnv+std-dev (= ${binary:Version}),
+ librust-fnv-1-dev (= ${binary:Version}),
+ librust-fnv-1+default-dev (= ${binary:Version}),
+ librust-fnv-1+std-dev (= ${binary:Version}),
+ librust-fnv-1.0-dev (= ${binary:Version}),
+ librust-fnv-1.0+default-dev (= ${binary:Version}),
+ librust-fnv-1.0+std-dev (= ${binary:Version}),
+ librust-fnv-1.0.7-dev (= ${binary:Version}),
+ librust-fnv-1.0.7+default-dev (= ${binary:Version}),
+ librust-fnv-1.0.7+std-dev (= ${binary:Version})
+Description: Fowler–Noll–Vo hash function - Rust source code
+ This package contains the source for the Rust fnv crate, packaged by debcargo
+ for use with cargo and dh-cargo.
